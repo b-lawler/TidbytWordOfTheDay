@@ -37,11 +37,11 @@ def main(config):
 	word_font = "5x8"
 
 	return render.Root(
-		delay = 80,
+		delay = 60,
 		child = render.Marquee(
 			height = 32 + int((definition_word_count * 3)),
 			scroll_direction = "vertical",
-			offset_start = 34,
+			offset_start = 32,
 			offset_end = 33,
 			child = render.Column(
 				cross_align = "center",
@@ -49,7 +49,7 @@ def main(config):
 					# render.Image(src=WORDNIK_ICON),
 					render.Padding(
 						child = render.WrappedText("Word of the Day", font="Dina_r400-6", color="#afa"),
-						pad = (0,0,0,6)
+						pad = (0,0,0,4)
 					),
 					render.Padding(
 						child = render.Column(
@@ -58,7 +58,7 @@ def main(config):
 								render.Text(part_of_speech.lower(), color = "#9c9c9c")
 							]
 						),
-						pad = (0,0,0,6)
+						pad = (0,0,0,5)
 					),
 					render.WrappedText(
 						width = 64,
@@ -67,8 +67,13 @@ def main(config):
 		 			),
 					render.Padding(
 						render.Text(word, color="#9cf", font = word_font),
-						pad = (0,4,0,0)
+						pad = (0,3,0,0)
 					),
+					render.Box(
+						width=64,
+						height=1,
+						color="#111"
+					)
 				]
 			)
 		)
