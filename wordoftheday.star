@@ -63,7 +63,8 @@ def main(config):
 					render.WrappedText(
 						width = 64,
 						linespacing = -1,
-		 				content = definition
+		 				content = definition,
+						color="#cfcfcf"
 		 			),
 					render.Padding(
 						render.Text(word, color="#9cf", font = word_font),
