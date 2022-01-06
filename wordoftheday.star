@@ -69,11 +69,6 @@ def main(config):
 					render.Padding(
 						render.Text(word, color="#9cf", font = word_font),
 						pad = (0,3,0,0)
-					),
-					render.Box(
-						width=64,
-						height=1,
-						color="#111"
 					)
 				]
 			)
